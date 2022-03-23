@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{%block title%} Последние кринжЫ {%endblock%}
+
+{%block content%}
+
+    {%if latest_arcticles_list %}
+        {% for a in latest_arcticles_list %}
+            <a href="{% url 'rabotai:detail' a.id %}">{{a.arcticle_title}}</a>
+        {% endfor%}
+    {% else %}
+        Статьи не найдены )=
+    {% endif %}
+
+    чикибабомни
+
+{%endblock%}
